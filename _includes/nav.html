@@ -1,0 +1,17 @@
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="{{ '/' | relative_url }}" class="nav-logo">
+      <span class="accent">&gt;</span> bernd.janzen
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="{{ '/#about' | relative_url }}" {% if page.url == '/' %}{% endif %}>About</a></li>
+      <li><a href="{{ '/#projects' | relative_url }}">Projects</a></li>
+      <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a></li>
+      <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+      <li><a href="{{ '/assets/bernd-janzen-cv.pdf' | relative_url }}" class="btn-outline-sm" target="_blank">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>

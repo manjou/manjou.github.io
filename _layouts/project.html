@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    <div class="project-layout">
+      <header class="project-page-header">
+        <div class="post-meta">
+          {% if page.status %}
+          <span class="project-status {{ page.status_class | default: 'completed' }}">{{ page.status }}</span>
+          {% endif %}
+          {% if page.date %}
+          <time class="post-time">{{ page.date | date: "%B %Y" }}</time>
+          {% endif %}
+        </div>
+        <h1 class="project-page-title">{{ page.title }}</h1>
+        <p class="project-page-desc">{{ page.description }}</p>
+        {% if page.tags %}
+        <div class="project-page-meta">
+          {% for tag in page.tags %}
+          <span class="tech-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+        <div class="project-page-links">
+          {% if page.github %}
+          <a href="{{ page.github }}" class="btn-outline" target="_blank" rel="noopener">↗ GitHub</a>
+          {% endif %}
+          {% if page.demo %}
+          <a href="{{ page.demo }}" class="btn-primary" target="_blank" rel="noopener">↗ Live Demo</a>
+          {% endif %}
+        </div>
+      </header>
+      <div class="project-body">
+        {{ content }}
+      </div>
+      <hr class="divider">
+      <a href="{{ '/#projects' | relative_url }}" class="btn-outline">← All projects</a>
+    </div>
+  </main>
+  {% include contact-strip.html %}
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

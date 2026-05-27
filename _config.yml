@@ -1,0 +1,45 @@
+title: Bernd Janzen
+tagline: Aspiring SOC Analyst & Cybersecurity Student
+description: Entry-level cybersecurity professional based in Berlin. Building detection labs, studying offensive and defensive security, and transitioning into the industry.
+baseurl: ""
+url: ""
+
+author:
+  name: Bernd Janzen
+  email: bernd.janzen.dev@gmail.com
+  location: Berlin, Germany
+
+social:
+  linkedin: https://www.linkedin.com/in/bernd-janzen
+  github: https://github.com/manjou
+  tryhackme: https://tryhackme.com/p/berndjanzen
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

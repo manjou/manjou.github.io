@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    <article class="post-layout">
+      <header class="post-header">
+        <div class="post-meta">
+          {% if page.category %}
+          <span class="post-category">{{ page.category }}</span>
+          {% endif %}
+          <time class="post-time" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+        </div>
+        <h1 class="post-h1">{{ page.title }}</h1>
+        {% if page.excerpt %}
+        <p class="post-lead">{{ page.description | default: page.excerpt | strip_html }}</p>
+        {% endif %}
+      </header>
+      <div class="post-body">
+        {{ content }}
+      </div>
+      <hr class="divider">
+      <a href="{{ '/blog' | relative_url }}" class="btn-outline">← Back to blog</a>
+    </article>
+  </main>
+  {% include contact-strip.html %}
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
