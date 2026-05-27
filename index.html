@@ -9,15 +9,15 @@ layout: default
     <div class="hero-content">
       <div class="hero-status">
         <span class="hero-status-dot"></span>
-        Currently studying at Masterschool · Berlin
+        Cybersecurity Intern @ Panos.ai · Berlin
       </div>
       <span class="hero-greeting">Hello, I'm</span>
       <h1 class="hero-name">Bernd Janzen</h1>
       <p class="hero-title">
-        <span class="highlight">SOC Analyst</span> in Training &amp; Cybersecurity Student
+        <span class="highlight">SOC Analyst</span> | Cybersecurity Analyst
       </p>
       <p class="hero-desc">
-        Building detection labs, learning offensive and defensive security, and transitioning into the cybersecurity industry. CompTIA Security+ certified, currently working toward Network+.
+        CompTIA Security+ certified. Currently interning as Cybersecurity Engineer at Panos.ai and completing a 4-segment enterprise security capstone project.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View my work</a>
@@ -33,8 +33,8 @@ layout: default
           <span class="stat-label">SIEM hands-on</span>
         </div>
         <div>
-          <span class="stat-value">Home Lab</span>
-          <span class="stat-label">Active detection lab</span>
+          <span class="stat-value">Panos.ai</span>
+          <span class="stat-label">Cybersecurity Intern</span>
         </div>
       </div>
     </div>
@@ -71,12 +71,12 @@ layout: default
               <span class="terminal-prompt">bernd@lab:~$</span>
               <span class="terminal-cmd"> whoami</span>
             </div>
-            <div class="terminal-line terminal-output">aspiring-soc-analyst</div>
+            <div class="terminal-line terminal-output">soc-analyst</div>
             <div class="terminal-line" style="margin-top:0.5rem;">
               <span class="terminal-prompt">bernd@lab:~$</span>
               <span class="terminal-cmd"> cat status.txt</span>
             </div>
-            <div class="terminal-line terminal-output">Currently: Masterschool Cybersecurity Program (May 2025 – Jun 2026)</div>
+            <div class="terminal-line terminal-output">Currently: Cybersecurity Engineer Intern @ Panos.ai (May–Jul 2026)</div>
             <div class="terminal-line terminal-output">Location:  Berlin, Germany</div>
             <div class="terminal-line terminal-output">Open to:   <span class="terminal-accent">Entry-level SOC / GRC roles</span></div>
           </div>
@@ -101,8 +101,8 @@ layout: default
             <span class="skill-tag">ISO 27001</span>
             <span class="skill-tag">GDPR</span>
             <span class="skill-tag">NIS2</span>
+            <span class="skill-tag">EU AI Act</span>
             <span class="skill-tag">BSI Grundschutz</span>
-            <span class="skill-tag">OWASP</span>
           </div>
         </div>
         <div class="skill-category">
@@ -117,11 +117,13 @@ layout: default
           </div>
         </div>
         <div class="skill-category">
-          <span class="skill-category-label">Programming</span>
+          <span class="skill-category-label">Cloud &amp; Programming</span>
           <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">GCP</span>
             <span class="skill-tag">Python</span>
             <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Node.js</span>
             <span class="skill-tag">Bash</span>
           </div>
         </div>
@@ -138,7 +140,29 @@ layout: default
       <h2 class="section-title">Projects</h2>
     </div>
     <div class="projects-grid">
-      <!-- Aurora AI Security — Featured -->
+      <!-- Panos.ai Internship -->
+      <div class="project-card featured">
+        <div class="project-header">
+          <div class="project-icon">🏢</div>
+          <div class="project-links">
+            <a href="https://panos.ai/de" target="_blank" rel="noopener" class="project-link" title="Panos.ai">↗</a>
+          </div>
+        </div>
+        <span class="project-status active">Current</span>
+        <h3 class="project-name">Cybersecurity Engineer Intern — Panos.ai</h3>
+        <p class="project-desc">
+          Regulatory compliance mapping for small businesses: EU AI Act (Low Risk), GDPR requirements, and NIST CSF SP.1300. Asset inventory automation across AWS, Azure, and Google Cloud.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">GDPR</span>
+          <span class="tech-tag">EU AI Act</span>
+          <span class="tech-tag">NIST CSF</span>
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Azure</span>
+          <span class="tech-tag">GCP</span>
+        </div>
+      </div>
+      <!-- Aurora AI Security -->
       <div class="project-card featured">
         <div class="project-header">
           <div class="project-icon">🛡️</div>
@@ -146,10 +170,10 @@ layout: default
             <a href="https://github.com/manjou/aurora-ai-security" target="_blank" rel="noopener" class="project-link" title="GitHub">↗</a>
           </div>
         </div>
-        <span class="project-status active">In Progress</span>
+        <span class="project-status completed">Completed</span>
         <h3 class="project-name">Aurora AI Security — Capstone Lab</h3>
         <p class="project-desc">
-          Enterprise-grade detection lab simulating a fictional AI security company's infrastructure. Designed a VLAN-segmented network aligned to NIST CSF 2.0, deployed Wazuh 4.x SIEM on Ubuntu Server, configured pfSense as the perimeter firewall, and ran attack simulations using Kali Linux and Atomic Red Team to generate and analyze alerts.
+          4-segment capstone project for a fictional German AI consultancy. Designed a 13-VLAN enterprise network, built a virtualized lab with pfSense and Wazuh SIEM, executed red team/blue team simulation using Kali Linux, and validated detections mapped to MITRE ATT&amp;CK. Aligned to NIST CSF 2.0, GDPR, and NIS2.
         </p>
         <div class="project-tech">
           <span class="tech-tag">Wazuh SIEM</span>
@@ -157,26 +181,9 @@ layout: default
           <span class="tech-tag">Ubuntu Server</span>
           <span class="tech-tag">Kali Linux</span>
           <span class="tech-tag">Windows 11 ARM</span>
-          <span class="tech-tag">VirtualBox / UTM</span>
           <span class="tech-tag">NIST CSF 2.0</span>
           <span class="tech-tag">GDPR / NIS2</span>
-        </div>
-      </div>
-      <!-- Home SOC Lab -->
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-icon">🔬</div>
-        </div>
-        <span class="project-status active">In Progress</span>
-        <h3 class="project-name">Home SOC Lab Environment</h3>
-        <p class="project-desc">
-          Personal detection lab running Wazuh SIEM on Ubuntu Server, collecting logs from multiple endpoints. Attack simulations with Kali Linux for alert generation and threat detection practice.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Wazuh</span>
-          <span class="tech-tag">Ubuntu Server</span>
-          <span class="tech-tag">Kali Linux</span>
-          <span class="tech-tag">VirtualBox</span>
+          <span class="tech-tag">MITRE ATT&amp;CK</span>
         </div>
       </div>
       <!-- Movie DB App -->
