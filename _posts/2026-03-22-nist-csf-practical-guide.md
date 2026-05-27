@@ -48,7 +48,18 @@ A question I had early on: what's the difference between NIST CSF and ISO 27001?
 
 In practice, many organizations use both — CSF for strategic risk management, ISO 27001 for certification and third-party assurance.
 
+## Applying It in Practice — Panos.ai Internship
+
+When I started my internship at Panos.ai as a Cybersecurity Engineer, NIST CSF stopped being a lab exercise and became a working tool.
+
+One of my main tasks was mapping NIST CSF SP.1300 for small businesses — a NIST publication specifically aimed at organizations that don't have dedicated security teams. Working through it made clear how much the framework needs to be adapted to context. A 10-person company has different risk tolerance, budget, and capacity than a mid-sized enterprise.
+
+The practical difference: in the Aurora lab, I applied CSF to my own infrastructure where I controlled everything. At Panos.ai, I'm applying it to real client environments with existing tooling, legacy decisions, and business constraints. The gap analysis looks the same on paper — the conversations around it are completely different.
+
+I also worked on EU AI Act (Low Risk) and GDPR requirements in parallel. What's useful about CSF here is that it doesn't conflict with either — it sits underneath them as the operational layer while the regulations define the compliance requirements on top.
+
 ## Further Reading
 
 - The official NIST CSF 2.0 documentation is surprisingly readable — start with the core functions document, not the full framework profile guide.
 - CISA publishes CSF implementation guides for specific sectors (healthcare, energy, etc.) which are good for seeing real-world application.
+- NIST SP 1300 is worth reading if you're interested in how CSF scales down to smaller organizations — it's more concrete than the main framework document.
