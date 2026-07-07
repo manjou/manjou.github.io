@@ -1,3 +1,17 @@
+// Theme toggle (initial theme is set inline in head.html to avoid a flash)
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+  const label = () =>
+    document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  themeToggle.textContent = label();
+  themeToggle.addEventListener('click', () => {
+    const next = label();
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    themeToggle.textContent = label();
+  });
+}
+
 // Nav scroll effect
 const nav = document.getElementById('nav');
 if (nav) {

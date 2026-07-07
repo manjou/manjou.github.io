@@ -104,11 +104,41 @@
   --accent-ink:   #14503c;
   --accent-wash:  rgba(30, 107, 82, 0.07);
   --warn:         #a3512e;
+  --panel:        #191d1b;
+  --panel-fg:     #f6f5f1;
   --display:      'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
   --sans:         'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --mono:         'JetBrains Mono', 'SF Mono', 'Courier New', monospace;
   --max-width:    1060px;
   --transition:   0.18s ease;
+}
+
+/* Dark theme — same document, read at night. Toggled via data-theme
+   (set inline in head.html before first paint). */
+:root[data-theme="dark"] {
+  --paper:        #15181a;
+  --surface:      #1b1f21;
+  --ink:          #e6e4dc;
+  --ink-soft:     #a8aca6;
+  --ink-faint:    #6f746f;
+  --rule:         #2d3234;
+  --rule-strong:  #41474a;
+  --accent:       #4fae8b;
+  --accent-ink:   #6cc2a2;
+  --accent-wash:  rgba(79, 174, 139, 0.09);
+  --panel:        #101314;
+}
+
+:root[data-theme="dark"] .btn-primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+:root[data-theme="dark"] .btn-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #101314;
 }
 
 /* ===========================
@@ -250,6 +280,32 @@ code, pre {
 }
 
 .nav-logo .accent { color: var(--accent); }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.theme-toggle::before { content: '◐ '; }
+
+.theme-toggle:hover {
+  color: var(--accent-ink);
+  border-color: var(--accent-ink);
+}
 
 .nav-toggle {
   display: flex;
@@ -1057,7 +1113,7 @@ ul.project-desc li { margin-bottom: 0.35rem; }
    CONTACT STRIP
 =========================== */
 .contact-strip {
-  background: var(--ink);
+  background: var(--panel);
   padding: 3.5rem 0;
   margin-top: 2rem;
 }
@@ -1070,7 +1126,7 @@ ul.project-desc li { margin-bottom: 0.35rem; }
 }
 
 .contact-text h2 {
-  color: var(--paper);
+  color: var(--panel-fg);
   font-size: 1.7rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
@@ -1093,15 +1149,15 @@ ul.project-desc li { margin-bottom: 0.35rem; }
   gap: 0.5rem;
   padding: 0.6rem 1.1rem;
   border: 1px solid rgba(246,245,241,0.3);
-  color: var(--paper);
+  color: var(--panel-fg);
   font-family: var(--mono);
   font-size: 0.8rem;
 }
 
 .contact-link:hover {
-  border-color: var(--paper);
+  border-color: var(--panel-fg);
   background: rgba(246,245,241,0.08);
-  color: var(--paper);
+  color: var(--panel-fg);
 }
 
 @media (min-width: 768px) {
@@ -1117,7 +1173,7 @@ ul.project-desc li { margin-bottom: 0.35rem; }
 =========================== */
 .footer {
   padding: 1.75rem 0;
-  background: var(--ink);
+  background: var(--panel);
   border-top: 1px solid rgba(246,245,241,0.12);
 }
 
@@ -1148,7 +1204,7 @@ ul.project-desc li { margin-bottom: 0.35rem; }
   color: rgba(246,245,241,0.55);
 }
 
-.footer-links a:hover { color: var(--paper); }
+.footer-links a:hover { color: var(--panel-fg); }
 
 /* ===========================
    PAGE HERO (inner pages)

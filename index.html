@@ -54,7 +54,7 @@ layout: default
           GRC Analyst based in Berlin. At Panos.ai I built the EU AI Act and GDPR compliance baseline for an AI startup: risk classification, GPAI documentation, RoPA, and core policies — and mapped 47 compliance elements across NIST CSF, GDPR, and the EU AI Act.
         </p>
         <p>
-          I automate compliance work with Python — most recently extracting GCP asset inventory (133 resources) and mapping it to the NIST CSF ID.AM schema.
+          I automate compliance work with Python — most recently extracting GCP asset inventory (133 resources) and mapping it to the NIST CSF ID.AM schema. That builder's approach comes from a full-stack web development background (CareerFoundry), and today it means directing AI coding agents through working pipelines and validating what they produce against real data.
         </p>
         <p>
           CompTIA Security+ certified, completed the Masterschool cybersecurity program (May 2025 – Jul 2026). My background includes an IHK EDV-Kaufmann qualification (1993) and IT support work in the 1990s. Native German speaker.
@@ -138,8 +138,8 @@ layout: default
       <h2 class="section-title">Projects</h2>
     </div>
     <div class="projects-grid">
-      <!-- GCP Compliance Automation -->
-      <div class="project-card">
+      <!-- Cloud Asset Inventory → Compliance Chatbot -->
+      <div class="project-card featured">
         <div class="project-header">
           <span class="project-ref">PRJ-01</span>
           <div class="project-links">
@@ -148,39 +148,23 @@ layout: default
           </div>
         </div>
         <span class="project-status completed">Completed</span>
-        <h3 class="project-name">GCP Compliance Automation</h3>
+        <h3 class="project-name">Cloud Asset Inventory → Compliance Chatbot</h3>
         <p class="project-desc">
-          Python scripts using the GCP Cloud Asset Inventory API. Extracted 133 GCP resources and mapped them to the NIST CSF ID.AM canonical schema, bridging cloud asset inventory and compliance documentation.
+          From raw GCP resource data to a plain-language compliance answer. Built a pipeline that scans a live GCP environment, maps resources to the NIST CSF ID.AM schema, checks them against GRC rules, and answers compliance questions in natural language via a GDPR-aware chatbot. Found and fixed two real config-drift bugs along the way.
         </p>
         <div class="project-tech">
+          <span class="tech-tag">NIST CSF</span>
+          <span class="tech-tag">GDPR</span>
+          <span class="tech-tag">GCP</span>
           <span class="tech-tag">Python</span>
-          <span class="tech-tag">GCP Cloud Asset Inventory API</span>
-        </div>
-      </div>
-      <!-- GDPR RAG Pipeline -->
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-ref">PRJ-02</span>
-          <div class="project-links">
-            <a href="https://github.com/manjou/gcp-cloudscope" target="_blank" rel="noopener" class="project-link">GitHub</a>
-          </div>
-        </div>
-        <span class="project-status completed">Completed</span>
-        <h3 class="project-name">GDPR Semantic Search RAG Pipeline</h3>
-        <p class="project-desc">
-          Semantic search over GDPR articles. 16 articles embedded with Vertex AI, served via Flask with a pgvector/Cloud SQL backend on GCP.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">pgvector</span>
-          <span class="tech-tag">Vertex AI embeddings</span>
-          <span class="tech-tag">Cloud SQL</span>
+          <span class="tech-tag">Vertex AI</span>
+          <span class="tech-tag">Compliance Automation</span>
         </div>
       </div>
       <!-- Aurora AI Security -->
       <div class="project-card featured">
         <div class="project-header">
-          <span class="project-ref">PRJ-03</span>
+          <span class="project-ref">PRJ-02</span>
           <div class="project-links">
             <a href="https://github.com/manjou/aurora-ai-security" target="_blank" rel="noopener" class="project-link">GitHub</a>
             <a href="{{ '/projects/aurora-ai-security/' | relative_url }}" class="project-link">Writeup</a>
