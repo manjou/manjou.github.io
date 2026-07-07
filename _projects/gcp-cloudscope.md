@@ -1,8 +1,8 @@
 ---
 title: gcp-cloudscope
 description: A live GCP asset-inventory and GRC compliance pipeline, plus a GDPR RAG chatbot — a personal sandbox for the same pattern used at panos.ai.
-status: Complete
-status_class: active
+status: Completed
+status_class: completed
 github: https://github.com/manjou/gcp-cloudscope
 date: 2026-07-04
 tags:

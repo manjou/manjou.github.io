@@ -1,8 +1,8 @@
 ---
 title: Aurora AI Security
-description: Capstone project — enterprise network design and SOC infrastructure for a simulated AI security company, built on a fully virtualized environment.
-status: In Progress
-status_class: active
+description: Masterschool capstone — dual-site enterprise network with 13 VLANs, virtualized security lab (pfSense, Wazuh SIEM), and GRC documentation aligned with NIST CSF 2.0, GDPR, NIS2, and IT-SiG 2.0.
+status: Completed
+status_class: completed
 github: https://github.com/manjou/aurora-ai-security
 date: 2026-02-01
 tags:
